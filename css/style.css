@@ -655,24 +655,24 @@ li:hover > .underline {
 /*Kalkulator*/
 
 .calc_title {
-    /*width: 506px;*/
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 2.250rem;
     line-height: 2.625rem;
     text-align: center;
     margin-bottom: 52px;
-    margin-top: 87px;
+    padding-top: 87px;
 }
 
 .calculator {
     background-color: #F7F7F7;
+    margin-top: 50px;
 }
 
 .calc {
     display: flex;
     justify-content: center;
-    margin-bottom: 109px;
+    padding-bottom: 109px;
 }
 
 
@@ -680,14 +680,12 @@ li:hover > .underline {
     width: 440px;
     height: 248px;
     margin-right: 47px;
-    /*display: flex;*/
 }
 input::placeholder {
     font-size: 0.813rem;
     line-height: 1.125rem ;
     font-weight: 400;
     color: #A5A5A5;
-    width: 100%;
 }
 
 .form_fields {
@@ -698,20 +696,127 @@ input::placeholder {
     box-shadow: 0 3px 6px #08A6E429;
     margin-bottom: 20px;
     padding-left: 20px;
+    outline: none;
 }
+.selector {
+    font-size: 0.813rem;
+    line-height: 1.125rem ;
+    font-weight: 400;
+    color: #A5A5A5;
+    width: 420px;
+    height: 40px;
+    border: 1px solid var(--color-blue);
+    border-radius: 6px;
+    box-shadow: 0 3px 6px #08A6E429;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    outline: none;
+    background-color: var(--color-white);
+    position: relative;
+    z-index: 10;
+    background-image: url("./assets/Arrow Down.svg");
+    background-position:80% center;
+
+}
+
+
+    /*background: transparent;*/
+/*position: relative;*/
+/*z-index: 10;*/
+
+
 
 .account,.rental {
     font-weight: 400;
     color: #707070;
     font-size: 0.750rem;
+    text-align: center;
+    line-height: 1rem;
+}
+.inputs>input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+
+    width: 24px;
+    height: 24px;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    border: 1px solid #95989A;
+    position: relative;
 }
 
+input.check:checked:after {
+    content: "";
+    width: 12px;
+    height: 11px;
+    display: block;
+    background-image: url("../assets/Checkmark.svg");
+    visibility: visible;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+}
 
 .outputs {
     width: 384px;
     height: 247px;
 }
 
+.results {
+    width: 385px;
+    height: 31px;
+    background-color: #55DFB4;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px #00000029;
+    margin-bottom: 8px;
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+}
+
+.item, .source {
+    font-size: 0.875rem;
+    line-height: 1.188rem;
+    font-weight: 400;
+    margin: 6px 0 6px 20px;
+}
+
+.item {
+    /*width: 58px;*/
+}
+.source {
+    margin: 6px auto;
+}
+
+
+.result {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    margin: 4px 20px 3px 0;
+}
+
+.total {
+    width: 179px;
+    height: 38px;
+    background-color: var(--color-blue);
+    margin-top: 22px;
+    float: right;
+}
+.total .item {
+    margin-top: 9.23px;
+    margin-bottom: 9.77px;
+}
+
+.total .result {
+    font-size: 1.250rem;
+    line-height: 1.688rem;
+    margin: 6px 20px 5px 0;
+
+}
 
 /*Koniec kalkulatora*/
 
@@ -840,9 +945,7 @@ input::placeholder {
 .rodo input {
     width: 24px;
     height: 24px;
-    margin: 4px 10px 0 0;
     visibility: hidden;
-    border-radius: 4px;
     position: absolute;
 }
 .rodo label {
@@ -862,8 +965,8 @@ input.checkbox_edit:checked:after {
     height: 11px;
     background-image: url("../assets/Checkmark.svg");
     position: absolute;
-    top: 35%;
-    right: 25%;
+    top: 37%;
+    right: 33%;
 
 }
 /*Koniec sekcji 6*/

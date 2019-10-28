@@ -180,13 +180,48 @@
                 <form class="inputs">
                     <input type="number" placeholder="Products quantity" class="form_fields"/>
                     <input type="number" placeholder="Estimated orders in month" class="form_fields"/>
-                    <input type="" placeholder="Choose package" class="form_fields"/>
-                    <input type="checkbox" id="accaunt" class=""/>
-                    <label for="accaunt" class="account">Accounting</label>
-                    <input type="checkbox" id="rental" class=""/>
+                    <div class="custom-select">
+                        <select class="selector" style="width:440px;">
+                            <option value="0">Choose package</option>
+                            <option value="1">Basic</option>
+                            <option value="2">Professional</option>
+                            <option value="3">Premium</option>
+                        </select>
+                    </div>
+                    <input type="checkbox" id="accaunt" class="check"/>
+                    <label for="accaunt" class="account">Accounting</label><br>
+                    <input type="checkbox" id="rental" class="check"/>
                     <label for="rental" class="rental">Rental of payment terminal</label>
                 </form>
-                <div class="outputs"></div>
+                <div class="outputs">
+                    <div class="results">
+                        <div class="item">Products</div>
+                        <div class="source"> * $0.5</div>
+                        <div class="result">$</div>
+                    </div>
+                    <div class="results">
+                        <div class="item">Orders</div>
+                        <div class="source"> * $0.25</div>
+                        <div class="result">$</div>
+                    </div>
+                    <div class="results">
+                        <div class="item">Package</div>
+                        <div class="source"></div>
+                        <div class="result">$</div>
+                    </div>
+                    <div class="results">
+                        <div class="item">Accounting</div>
+                        <div class="result">$</div>
+                    </div>
+                    <div class="results">
+                        <div class="item">Terminal</div>
+                        <div class="result">$</div>
+                    </div>
+                    <div class="results total">
+                        <div class="item">Total</div>
+                        <div class="result">$</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container cont_sec_6">

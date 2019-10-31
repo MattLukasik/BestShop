@@ -179,45 +179,54 @@
             <h2 class="calc_title">Calculate how much you'll pay</h2>
             <div class="calc">
                 <form class="inputs">
-                    <input type="number" placeholder="Products quantity" class="form_fields"/>
-                    <input type="number" placeholder="Estimated orders in month" class="form_fields"/>
+                    <input type="number" id="product_quant" placeholder="Products quantity" class="form_fields"/>
+                    <input type="number" id="order_quant" placeholder="Estimated orders in month" class="form_fields"/>
                     <button class="form_fields form_fields_btn">Choose package</button>
                     <div class="dropdown_hidden dropdown_visible">
                             <span class="option basic">Basic</span>
                             <span class="option professional">Professional</span>
                             <span class="option premium">Premium</span>
                     </div>
-                    <input type="checkbox" id="accaunt" class="check"/>
-                    <label for="accaunt" class="account">Accounting</label><br>
+                    <input type="checkbox" id="account" class="check"/>
+                    <label for="account" class="account">Accounting</label><br>
                     <input type="checkbox" id="rental" class="check"/>
                     <label for="rental" class="rental">Rental of payment terminal</label>
+                    <div class="error_msg"></div>
                 </form>
                 <div class="outputs">
-                    <div class="results">
+                    <div class="results prod">
                         <div class="item">Products</div>
+                        <div class="source_num" id="source_quant_prod"></div>
                         <div class="source"> * $0.5</div>
+                        <div class="num_result product" id="product_result"></div>
                         <div class="result">$</div>
                     </div>
-                    <div class="results">
+                    <div class="results ord">
                         <div class="item">Orders</div>
+                        <div class="source_num" id="source_quant_order"></div>
                         <div class="source"> * $0.25</div>
+                        <div class="num_result order" id="orders_result"></div>
                         <div class="result">$</div>
                     </div>
-                    <div class="results">
+                    <div class="results pack">
                         <div class="item">Package</div>
                         <div class="source"></div>
+                        <div class="num_result package">25</div>
                         <div class="result">$</div>
                     </div>
-                    <div class="results">
+                    <div class="results acc">
                         <div class="item">Accounting</div>
+                        <div class="num_result acc"></div>
                         <div class="result">$</div>
                     </div>
-                    <div class="results">
+                    <div class="results rent">
                         <div class="item">Terminal</div>
+                        <div class="num_result terminal"></div>
                         <div class="result">$</div>
                     </div>
                     <div class="results total">
                         <div class="item">Total</div>
+                        <div class="num_result_total"></div>
                         <div class="result">$</div>
                     </div>
                 </div>

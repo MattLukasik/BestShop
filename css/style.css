@@ -710,11 +710,17 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+    cursor:pointer;
 
 }
 .form_fields_btn::after {
     content: url("../assets/Arrow Down.svg");
-
+    margin-top: 5px;
+}
+.btn_visible::after {
+    content: url("../assets/Arrow Up.svg");
+    margin-top: 5px;
 }
 .dropdown_visible {
     display: flex;
@@ -731,33 +737,13 @@ input::placeholder {
     line-height: 1.125rem ;
     font-weight: 400;
     position: absolute;
-/*    visibility: hidden;*/
     z-index: 1;
 }
-
-
 .dropdown_hidden {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*background-color: var(--color-white);*/
-    /*width: 420px;*/
-    /*height: 105px;*/
-    /*border: 1px solid var(--color-red);*/
-    /*border-radius: 6px;*/
-    /*box-shadow: 0 3px 6px #EB476E29;*/
-    /*padding-left: 20px;*/
-    /*justify-content: space-evenly;*/
-    /*font-size: 0.813rem;*/
-    /*line-height: 1.125rem ;*/
-    /*font-weight: 400;*/
-    /*position: absolute;*/
     visibility: hidden;
-    /*z-index: 1;*/
 }
-.visible {
-
-}
-
+/*.error_msg {*/
+/*}*/
 
 .account,.rental {
     font-weight: 400;
@@ -798,6 +784,8 @@ input.check:checked:after {
     height: 247px;
 }
 
+
+
 .results {
     width: 385px;
     height: 31px;
@@ -825,6 +813,13 @@ input.check:checked:after {
 }
 
 
+.num_result, .num_result_total {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    margin: 4px 20px 3px 0;
+}
+
 .result {
     font-size: 1.125rem;
     line-height: 1.5rem;
@@ -848,7 +843,22 @@ input.check:checked:after {
     font-size: 1.250rem;
     line-height: 1.688rem;
     margin: 6px 20px 5px 0;
+}
 
+.results.prod {
+    visibility: hidden;
+}
+.results.ord {
+    visibility: hidden;
+}
+.results.pack{
+    visibility: hidden;
+}
+.results.acc {
+    visibility: hidden;
+}
+.results.rent {
+    visibility: hidden;
 }
 
 /*Koniec kalkulatora*/

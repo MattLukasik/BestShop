@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
     let sum5 = 0;
 
 
-
-
     //Przekazywanie w locie i mnożenie danych z pola ILOŚĆ PRODUKTÓW //
     //+POJAWIANIE BELKI
     var formFieldProd = document.getElementById('product_quant');
@@ -34,12 +32,12 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var productResult = document.getElementById('product_result');
     var productBar = document.querySelector('.results.prod');
 
-    formFieldProd.addEventListener('input', function(a, b){
+    formFieldProd.addEventListener('input', function (a, b) {
         sourceNumProd.innerText = this.value;
         productResult.innerText = this.value * 0.5;
         productBar.style.visibility = 'visible';
         let sum1 = this.value * 0.5;
-        total.innerText = sum1 + sum2 + sum3 +sum4 +sum5;
+        total.innerText = sum1 + sum2 + sum3 + sum4 + sum5;
     });
 
 
@@ -50,14 +48,50 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var orderResult = document.getElementById('orders_result');
     var productOrd = document.querySelector('.results.ord');
 
-    formFieldOrder.addEventListener('input', function() {
+    formFieldOrder.addEventListener('input', function () {
         sourceNumOrder.innerText = this.value;
         orderResult.innerText = this.value * 0.25;
         productOrd.style.visibility = 'visible';
         sum2 = this.value * 0.25;
-        total.innerText = sum1 + sum2 + sum3 +sum4 +sum5;
+        total.innerText = sum1 + sum2 + sum3 + sum4 + sum5;
     });
 
+    //DODANIE PAKIETU + POJAWIENIE BELKI
+
+    var optBasic = document.querySelector('.option.basic');
+    var optProf = document.querySelector('.option.professional');
+    var optPremium = document.querySelector('.option.premium');
+    var optShown = document.querySelector('.form_fields_btn');
+    var packBar = document.querySelector('.results.pack');
+    var optPrice = document.querySelector('.num_result.package');
+
+
+    console.log(packBar);
+    optBasic.addEventListener('click', function(e){
+        optShown.innerText = this.innerText;
+        dropMenu.classList.toggle('dropdown_hidden');
+        optPrice.innerText = 0;
+        packBar.classList.toggle('pack');
+        sum3 = 0;
+        total.innerText = sum1 + sum2 + sum3 + sum4 + sum5;
+    });
+
+    optProf.addEventListener('click', function(e){
+        optShown.innerText = this.innerText;
+        dropMenu.classList.toggle('dropdown_hidden');
+        optPrice.innerText = 25;
+        packBar.classList.toggle('pack');
+        sum3 = 25;
+        total.innerText = sum1 + sum2 + sum3 + sum4 + sum5;
+    });
+    optPremium.addEventListener('click', function(e){
+        optShown.innerText = this.innerText;
+        dropMenu.classList.toggle('dropdown_hidden');
+        optPrice.innerText = 60;
+        packBar.classList.toggle('pack');
+        sum3 = 60;
+        total.innerText = sum1 + sum2 + sum3 + sum4 + sum5;
+    });
     // DODANIE KSIĘGOWOŚCI I TERMINALA //
     //+pojawianie belki
     var accountCheck = document.getElementById('account');
@@ -67,17 +101,22 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var accBar = document.querySelector('.results.acc');
     var rentBar = document.querySelector('.results.rent');
 
-    accountCheck.addEventListener('click', function(e){
+    accountCheck.addEventListener('click', function (e) {
         accountingPrice.innerText = 25;
-        accBar.style.visibility = 'visible';
+        accBar.classList.toggle('acc');
         sum4 = 25;
-        total.innerText = sum1 + sum2 + sum3 +sum4 +sum5;
+        total.innerText = sum1 + sum2 + sum3 + sum4 + sum5;
     });
-    rentalCheck.addEventListener('click', function(e) {
+    rentalCheck.addEventListener('click', function (e) {
         rentalPrice.innerText = 30;
-        rentBar.style.visibility = 'visible';
+        rentBar.classList.toggle('rent');
         sum5 = 25;
-        total.innerText = sum1 + sum2 + sum3 +sum4 +sum5;
+        total.innerText = sum1 + sum2 + sum3 + sum4 + sum5;
     });
+
+
+
+});
+
 
 

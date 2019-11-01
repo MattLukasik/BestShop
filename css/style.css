@@ -802,18 +802,15 @@ input.check:checked:after {
     justify-content: space-between;
 }
 
-.item, .source {
+.item, .source, .source_num {
     font-size: 0.875rem;
     line-height: 1.188rem;
     font-weight: 400;
     margin: 6px 0 6px 20px;
 }
 
-.item {
-    /*width: 58px;*/
-}
 .source {
-    margin: 6px auto;
+    margin: 6px;
 }
 
 
@@ -821,14 +818,16 @@ input.check:checked:after {
     font-size: 1.125rem;
     line-height: 1.5rem;
     font-weight: 700;
-    margin: 4px 20px 3px 0;
+    margin: 4px 0 3px 0;
 }
+.num_result.acc {}
 
 .result {
     font-size: 1.125rem;
     line-height: 1.5rem;
     font-weight: 700;
     margin: 4px 20px 3px 0;
+    /*float: right;*/
 }
 
 .total {

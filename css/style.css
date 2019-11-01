@@ -800,6 +800,7 @@ input.check:checked:after {
     color: var(--color-white);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .item, .source, .source_num {
@@ -812,7 +813,11 @@ input.check:checked:after {
 .source {
     margin: 6px;
 }
+.optPack {
+    font-size: 0.875rem;
+    line-height: 1.188rem;
 
+}
 
 .num_result, .num_result_total {
     font-size: 1.125rem;
@@ -820,14 +825,12 @@ input.check:checked:after {
     font-weight: 700;
     margin: 4px 0 3px 0;
 }
-.num_result.acc {}
 
 .result {
     font-size: 1.125rem;
     line-height: 1.5rem;
     font-weight: 700;
     margin: 4px 20px 3px 0;
-    /*float: right;*/
 }
 
 .total {
@@ -972,7 +975,8 @@ input.check:checked:after {
 
 .input_1, .input_2{
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: #707070;
 }
 .underline_1 {
     border: 1px solid #95989A;

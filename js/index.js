@@ -110,18 +110,24 @@ document.addEventListener('DOMContentLoaded', function (e) {
     accountCheck.addEventListener('click', function (e) {
         accountingPrice.innerText = '$'+25;
         accBar.classList.toggle('acc');
-        sum4 = 25;
+        if (accBar.classList.contains('acc')) {
+           sum4 = 0;
+        } else {
+            sum4 = 25;
+        }
         total.innerText = '$'+(sum1 + sum2 + sum3 + sum4 + sum5);
     });
 
     rentalCheck.addEventListener('click', function (e) {
         rentalPrice.innerText = '$'+30;
         rentBar.classList.toggle('rent');
-        sum5 = 30;
+        if (rentBar.classList.contains('rent')) {
+            sum5 = 0;
+        } else {
+            sum5 = 30;
+        }
         total.innerText = '$'+(sum1 + sum2 + sum3 + sum4 + sum5);
     });
-
-
 
 });
 

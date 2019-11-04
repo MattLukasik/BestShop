@@ -22,12 +22,17 @@ body {
     background-size: auto;
 }
 /*Sekcja 1: nagłówek z nawigacją*/
+.sec_1 {
+    box-shadow: 2px 0 7px 0 #A5A5A5;
+}
+
 
 .cont-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 2px 0 7px 0 #A5A5A5;
+    /*box-shadow: 2px 0 7px 0 #A5A5A5;*/
+
 }
 
 .page-nav-list {
@@ -236,6 +241,10 @@ li:hover > .underline {
 
 
 /*Sekcja 4 - o nas*/
+.sec_4 {
+    background-color: #F7F7F7;
+}
+
 
 .cont_sec_4 {
     background-color: #F7F7F7;
@@ -1024,6 +1033,10 @@ input.checkbox_edit:checked:after {
 
 /*Sekcja 7 - footer*/
 
+.sec_7 {
+    box-shadow: 0 -5px 40px #00000029;
+}
+
 .footer-logo {
     font-family: 'Raleway', sans-serif;
     font-size: 1.625rem;
@@ -1031,7 +1044,6 @@ input.checkbox_edit:checked:after {
     font-weight: 300;
     color: var(--color-blue);
     line-height: 1.875rem;
-    /*margin-top: 2.48px;*/
 
 }
 
@@ -1040,7 +1052,7 @@ input.checkbox_edit:checked:after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 -5px 40px #00000029;
+
 }
 
 .copyright {

@@ -24,6 +24,10 @@ body {
 /*Sekcja 1: nagłówek z nawigacją*/
 .sec_1 {
     box-shadow: 2px 0 7px 0 #A5A5A5;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-white);
+    z-index: 2;
 }
 
 
@@ -31,7 +35,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*box-shadow: 2px 0 7px 0 #A5A5A5;*/
 
 }
 
@@ -450,12 +453,8 @@ li:hover > .underline {
 
 /*Koniec sekcji 4*/
 
-/*Początek sekcji 5 i 6 */
+/*!*Początek sekcji 5*/
 
-.sec_5.sec_6 {
-    /*height: 1306px;*/
-    /*height: auto;*/
-}
 
 .cont_sec_5 {
     width: 1266px;
@@ -661,7 +660,12 @@ li:hover > .underline {
 
 /*//Koniec sekcji 5//*/
 
-/*Kalkulator*/
+.sec_5a {
+    background-color: #F7F7F7;
+}
+
+
+
 
 .calc_title {
     font-family: 'Raleway', sans-serif;
@@ -674,7 +678,6 @@ li:hover > .underline {
 }
 
 .calculator {
-    background-color: #F7F7F7;
     margin-top: 50px;
 }
 
@@ -983,51 +986,66 @@ input.check:checked:after {
 }
 
 .input_1, .input_2{
-    border: none;
+    border: 1px solid #95989A;
+    border-left: none;
+    border-right: none;
+    border-top: none;
     font-size: 1.3rem;
+    line-height: 2.5rem;
     color: #707070;
 }
-.underline_1 {
-    border: 1px solid #95989A;
-    width: 440px;
-    height: 0;
-    background-color: #95989A;
+/*.underline_1 {*/
+/*    border: 1px solid #95989A;*/
+/*    width: 440px;*/
+/*    height: 0;*/
+/*    background-color: #95989A;*/
 
-}
-.underline_2 {
-    border: 1px solid #95989A;
-    width: 440px;
-    height: 0;
-    background-color: #95989A;
-}
+/*}*/
+/*.underline_2 {*/
+/*    border: 1px solid #95989A;*/
+/*    width: 440px;*/
+/*    height: 0;*/
+/*    background-color: #95989A;*/
+/*}*/
 
-.rodo input {
+
+.rodo input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+
     width: 24px;
     height: 24px;
-    visibility: hidden;
-    position: absolute;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    border: 1px solid #95989A;
+    position: relative;
+    cursor:pointer;
+    margin-right: 10px;
 }
 .rodo label {
-    width: 24px;
-    height: 24px;
+    width: 405px;
+    height: 108px;
     margin: 4px 10px 0 0;
-    border: 1px solid #95989A;
-    border-radius: 4px;
-    position: relative;
+    cursor: pointer;
+
 }
 
 input.checkbox_edit:checked:after {
     content: "";
-    display: block;
-    visibility: visible;
     width: 12px;
     height: 11px;
+    display: block;
     background-image: url("../assets/Checkmark.svg");
+    visibility: visible;
     position: absolute;
-    top: 37%;
-    right: 33%;
+    top: 30%;
+    right: 25%;
 
 }
+
 /*Koniec sekcji 6*/
 
 

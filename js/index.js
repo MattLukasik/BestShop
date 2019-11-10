@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function (e) {
     console.log('loaded');
 
+
 //    DROPDOWN MENU W KALKULATORZE//
 
     var dropBtn = document.querySelector('.form_fields_btn');
@@ -33,11 +34,15 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var productBar = document.querySelector('.results.prod');
 
     formFieldProd.addEventListener('input', function (a, b) {
-        sourceNumProd.innerText = this.value +' * $0.5';
-        productResult.innerText = '$'+this.value * 0.5;
-        productBar.style.visibility = 'visible';
-        sum1 = this.value * 0.5;
-        total.innerText = '$'+(sum1 + sum2 + sum3 + sum4 + sum5);
+        if (this.value < 0 || this.value.includes(".") || this.value.includes(",")) {
+            sourceNumProd.innerText = "Podaj liczbę całkowitą większą od 0"   //WALIDACJA INPUTU, MOŻNA TEŻ WSTAWIĆ DO INPUTUT W HTML:
+        } else {                                                                  // min="0" oninput="validity.valid||(value='');"
+            sourceNumProd.innerText = this.value + ' * $0.5';                      // DZIALA IDENTYCZNIE ALE NIE PRZEKAZUJE ALERTU
+            productResult.innerText = '$' + this.value * 0.5;
+            productBar.style.visibility = 'visible';
+            sum1 = this.value * 0.5;
+            total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
+        }
     });
 
 
@@ -50,11 +55,15 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var productOrd = document.querySelector('.results.ord');
 
     formFieldOrder.addEventListener('input', function () {
-        sourceNumOrder.innerText = this.value+' * $0.5';
-        orderResult.innerText = '$'+this.value * 0.25;
-        productOrd.style.visibility = 'visible';
-        sum2 = this.value * 0.25;
-        total.innerText = '$'+(sum1 + sum2 + sum3 + sum4 + sum5);
+        if (this.value < 0 || this.value.includes(".") || this.value.includes(",")) {   //WALIDACJA INPUTU, MOŻNA TEŻ WSTAWIĆ DO INPUTUT W HTML:
+            sourceNumOrder.innerText = "Podaj liczbę całkowitą większą od 0"            // min="0" oninput="validity.valid||(value='');"
+        } else {                                                                        // DZIALA IDENTYCZNIE ALE NIE PRZEKAZUJE ALERTU
+            sourceNumOrder.innerText = this.value + ' * $0.5';
+            orderResult.innerText = '$' + this.value * 0.25;
+            productOrd.style.visibility = 'visible';
+            sum2 = this.value * 0.25;
+            total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
+        }
     });
 
     //DODANIE PAKIETU + POJAWIENIE BELKI
@@ -67,36 +76,36 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var optPrice = document.querySelector('.num_result.package');
     var optPack = document.querySelector('.optPack');
 
-    optBasic.addEventListener('click', function(e){
+    optBasic.addEventListener('click', function (e) {
         optShown.innerText = this.innerText;
         dropMenu.classList.toggle('dropdown_hidden');
         optPack.innerText = 'Basic';
-        optPrice.innerText = '$'+0;
+        optPrice.innerText = '$' + 0;
         packBar.classList.remove('pack');
         arrowDown.classList.toggle('btn_visible');
         sum3 = 0;
-        total.innerText = '$'+(sum1 + sum2 + sum3 + sum4 + sum5);
+        total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
     });
 
-    optProf.addEventListener('click', function(e){
+    optProf.addEventListener('click', function (e) {
         optShown.innerText = this.innerText;
         dropMenu.classList.toggle('dropdown_hidden');
         optPack.innerText = 'Professional';
-        optPrice.innerText = '$'+25;
+        optPrice.innerText = '$' + 25;
         packBar.classList.remove('pack');
         arrowDown.classList.toggle('btn_visible');
         sum3 = 25;
-        total.innerText = '$'+(sum1 + sum2 + sum3 + sum4 + sum5);
+        total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
     });
-    optPremium.addEventListener('click', function(e){
+    optPremium.addEventListener('click', function (e) {
         optShown.innerText = this.innerText;
         dropMenu.classList.toggle('dropdown_hidden');
         optPack.innerText = 'Premium';
-        optPrice.innerText = '$'+60;
+        optPrice.innerText = '$' + 60;
         packBar.classList.remove('pack');
         arrowDown.classList.toggle('btn_visible');
         sum3 = 60;
-        total.innerText ='$'+(sum1 + sum2 + sum3 + sum4 + sum5);
+        total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
     });
     // DODANIE KSIĘGOWOŚCI I TERMINALA //
     //+pojawianie belki
@@ -108,25 +117,25 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var rentBar = document.querySelector('.results.rent');
 
     accountCheck.addEventListener('click', function (e) {
-        accountingPrice.innerText = '$'+25;
+        accountingPrice.innerText = '$' + 25;
         accBar.classList.toggle('acc');
         if (accBar.classList.contains('acc')) {
-           sum4 = 0;
+            sum4 = 0;
         } else {
             sum4 = 25;
         }
-        total.innerText = '$'+(sum1 + sum2 + sum3 + sum4 + sum5);
+        total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
     });
 
     rentalCheck.addEventListener('click', function (e) {
-        rentalPrice.innerText = '$'+30;
+        rentalPrice.innerText = '$' + 30;
         rentBar.classList.toggle('rent');
         if (rentBar.classList.contains('rent')) {
             sum5 = 0;
         } else {
             sum5 = 30;
         }
-        total.innerText = '$'+(sum1 + sum2 + sum3 + sum4 + sum5);
+        total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
     });
 
 });

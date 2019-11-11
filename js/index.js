@@ -35,7 +35,12 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
     formFieldProd.addEventListener('input', function (a, b) {
         if (this.value < 0 || this.value.includes(".") || this.value.includes(",")) {
-            sourceNumProd.innerText = "Podaj liczbę całkowitą większą od 0"   //WALIDACJA INPUTU, MOŻNA TEŻ WSTAWIĆ DO INPUTUT W HTML:
+            sourceNumProd.innerText = "Podaj liczbę całkowitą większą od 0";
+            productResult.innerText = '$' + 0 * 0.5;
+            productBar.style.visibility = 'visible';
+            sum1 = 0 * 0.5;
+            total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
+                                                                                    //WALIDACJA INPUTU, MOŻNA TEŻ WSTAWIĆ DO INPUTUT W HTML:
         } else {                                                                  // min="0" oninput="validity.valid||(value='');"
             sourceNumProd.innerText = this.value + ' * $0.5';                      // DZIALA IDENTYCZNIE ALE NIE PRZEKAZUJE ALERTU
             productResult.innerText = '$' + this.value * 0.5;
@@ -43,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
             sum1 = this.value * 0.5;
             total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
         }
+        console.log(this.value);
     });
 
 
@@ -56,8 +62,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
     formFieldOrder.addEventListener('input', function () {
         if (this.value < 0 || this.value.includes(".") || this.value.includes(",")) {   //WALIDACJA INPUTU, MOŻNA TEŻ WSTAWIĆ DO INPUTUT W HTML:
-            sourceNumOrder.innerText = "Podaj liczbę całkowitą większą od 0"            // min="0" oninput="validity.valid||(value='');"
-        } else {                                                                        // DZIALA IDENTYCZNIE ALE NIE PRZEKAZUJE ALERTU
+            sourceNumOrder.innerText = "Podaj liczbę całkowitą większą od 0";           // min="0" oninput="validity.valid||(value='');"
+            orderResult.innerText = '$' + 0 * 0.25;                                        // DZIALA IDENTYCZNIE ALE NIE PRZEKAZUJE ALERTU
+            productOrd.style.visibility = 'visible';
+            sum2 = 0 * 0.25;
+            total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
+
+        } else {
             sourceNumOrder.innerText = this.value + ' * $0.5';
             orderResult.innerText = '$' + this.value * 0.25;
             productOrd.style.visibility = 'visible';

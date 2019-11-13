@@ -1,4 +1,9 @@
- @media(max-width: 375px) {
+ @media(max-width: 600px) {
+
+   .container {
+     max-width: 375px;
+   }
+
    .start_button {
      padding: 22px 92px 23px 92px;
      margin: 0 32px;
@@ -190,6 +195,14 @@
      padding: 60px 0 0 21px;
    }
 
+   .trumpet_pic {
+     width: 314px;
+     height: 195px;
+   }
+
+   .inside_trumpet_pic {
+     margin: 30px 35px 0 0;
+   }
 
    .green_line {
      display: none;
@@ -197,11 +210,104 @@
 
    .cont_sec_5 {
      height: auto;
-
+     margin: 60px auto 60px;
    }
 
    .offers {
      display: block;
+     width: 375px;
+     height: auto;
+   }
+
+   .offer_container {
+     width: 293px;
+     height: auto;
+     margin: 0 auto 54px auto;
+   }
+
+   .offer_container:nth-child(2) {
+     width: 339px;
+     height: 277px;
+   }
+
+   .offer {
+     width: 293px;
+     height: 251px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .offer.basic {
+     margin: 0;
+   }
+   .offer.professional {
+     width: 339px;
+     height: 277px;
+     zoom: 100%;
+     margin: 0;
+   }
+   .offer.premium {
+     margin: 0;
+   }
+
+
+   .liPoint {
+     text-align: left;
+   }
+   .respons_1_2 {
+     width: 100%;
+     height: 253px;
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .respons_1 {
+     align-self: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .respons_2 {
+     width: 140px;
+     display: block;
+     text-align: left;
+   }
+
+   .basic .respons_1_2 .respons_1 {
+     margin-left: 45px;
+     margin-right: 43px;
+   }
+
+   .basic .respons_1_2 .respons_2 {
+     margin: 40px 11px 37px 0;
+   }
+
+
+   .title_1 {
+     margin-top: 0;
+   }
+
+   .price_2 {
+     margin: 0
+   }
+
+   .offer_3 {
+     margin-top: 4px;
+   }
+
+   .hdd_4 {
+     margin: 0;
+   }
+
+   .button_9 {
+     margin: 0;
+   }
+
+   .pricing {
+     font-size: 2.250rem;
+     margin-bottom: 14px;
    }
 
    .sec_5a {

@@ -279,30 +279,30 @@
      margin-left: 45px;
      margin-right: 43px;
    }
-
    .basic .respons_1_2 .respons_2 {
      margin: 40px 11px 37px 0;
    }
 
-
-   .title_1 {
-     margin-top: 0;
+   .professional .respons_1_2 .respons_1 {
+     margin-left: 28px;
+     margin-right: 21px;
+   }
+   .professional .respons_1_2 .respons_2 {
+     margin: 51px 41px 51px 0;
    }
 
-   .price_2 {
-     margin: 0
+   .premium .respons_1_2 .respons_1 {
+     margin-left: 31px;
+   }
+   .premium .respons_1_2 .respons_2 {
+     margin: 40px 16px 37px 0;
+   }
+   .title_1, .price_2, .hdd_4, .button_9 {
+     margin-top: 0;
    }
 
    .offer_3 {
      margin-top: 4px;
-   }
-
-   .hdd_4 {
-     margin: 0;
-   }
-
-   .button_9 {
-     margin: 0;
    }
 
    .pricing {
@@ -313,5 +313,43 @@
    .sec_5a {
      display: none;
    }
+
+   .cont_sec_6 {
+     width: 375px;
+     height: 376px;
+     margin: 84px auto 59px;
+     display: block;
+   }
+   .cont_question {
+     width: 316px;
+   }
+   .contact_icons {
+     display: block;
+   }
+   .question {
+     font-size: 2.500rem;
+     margin-bottom: 5px;
+   }
+   .contact_us {
+     margin-bottom: 29px;
+   }
+  ._mail {
+    margin-top: 15px;
+  }
+   ._phone {
+     margin-top: 17px;
+   }
+
+   .contact_form {
+     width: 316px;
+     height: auto;
+   }
+    .mame.email {
+      width: 316px;
+    }
+   label.name, .input_1, label.email, .input_2 {
+     width: 316px;
+   }
+
 
   }

@@ -1,4 +1,4 @@
- @media(max-width: 600px) {
+ @media(max-width: 375px) {
 
    .container {
      max-width: 375px;
@@ -316,12 +316,13 @@
 
    .cont_sec_6 {
      width: 375px;
-     height: 376px;
+     height: 644px;
      margin: 84px auto 59px;
      display: block;
    }
    .cont_question {
      width: 316px;
+     margin: 0 auto;
    }
    .contact_icons {
      display: block;
@@ -343,13 +344,32 @@
    .contact_form {
      width: 316px;
      height: auto;
+     margin: 0 auto;
    }
-    .mame.email {
+    .name.email {
       width: 316px;
+      margin: 56px 0 30px;
     }
-   label.name, .input_1, label.email, .input_2 {
+   .name_input_1, .input_1, .email_input_2, .input_2 {
      width: 316px;
    }
+   div.rodo {
+      width: 316px;
+      height: 156px;
+   }
 
-
+   label.rodo {
+     width: 277px;
+     height: 156px;
+     margin: 0;
+   }
+   .footer-logo_cont {
+     margin-left: 17px;
+   }
+   .socials {
+     margin-right: 30px;
+   }
+   .copyright {
+     margin-top: 0.5px;
+   }
   }

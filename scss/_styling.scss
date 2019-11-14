@@ -22,6 +22,7 @@ body {
   background-size: auto;
 }
 /*Sekcja 1: nagłówek z nawigacją*/
+
 .sec_1 {
   box-shadow: 2px 0 7px 0 #A5A5A5;
   position: fixed;
@@ -35,12 +36,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .page-nav-list {
   display: flex;
-  padding-right: 137px;
+  height: 70px;
 }
 
 .page-logo {
@@ -49,7 +49,7 @@ body {
   text-decoration: none;
   font-weight: 300;
   color: var(--color-blue);
-  padding: 16px 16px 17px 136px;
+  padding: 16px 16px 17px 37px;
   line-height: 2.313rem;
 }
 
@@ -59,7 +59,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: #A5A5A5;
-  padding: 28px 37px 27px;
+  margin: 28px 37px 27px;
   display: flex;
   letter-spacing: 0.205rem;
   line-height: 0.938rem;
@@ -68,8 +68,7 @@ body {
 .underline {
   background-color: var(--color-white);
   width: 70px;
-  height: 3px;
-  border: 0 solid var(--color-white);
+  border: 4 solid var(--color-white);
   margin: auto;
 }
 
@@ -122,6 +121,7 @@ li:hover > .underline {
 }
 
 .start_button {
+  width: 440px;
   color: var(--color-white);
   font-size: 1rem;
   line-height: 1.375rem;
@@ -131,7 +131,8 @@ li:hover > .underline {
   border: 0 solid var(--color-blue);
   background-color: var(--color-blue);
   text-decoration: none;
-  padding: 22px 157px 23px 157px;
+  padding: 22px 0 23px 0;
+  margin: 0 auto;
   box-shadow: 5px 10px 14px #07ACE629;
   border-radius: 40px;
 }
@@ -896,6 +897,7 @@ input.check:checked:after {
   height: 376px;
   margin: 155px auto 59px;
   display: flex;
+  justify-content: center;
 }
 
 .question {
@@ -1077,7 +1079,7 @@ input.checkbox_edit:checked:after {
 .socials {
   height: 24px;
   display: flex;
-  margin-right: 136px;
+  margin-right: 50px;
 }
 
 .twitter {
@@ -1096,5 +1098,5 @@ input.checkbox_edit:checked:after {
 }
 
 .footer-logo_cont {
-  margin-left: 136px;
+  margin-left: 50px;
 }

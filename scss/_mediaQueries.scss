@@ -1,12 +1,295 @@
- @media(max-width: 375px) {
+// Desktop full screen
 
-   .container {
-     max-width: 375px;
+@media screen and (min-width: 1000px) and (max-width: 1352px){
+  .container {
+    width: 100vw;
+    padding: 0 15px;
+  }
+}
+
+// BreakPoint 1 - spadają pricingi (sekcja 5)
+
+@media screen and (min-width: 1000px) and (max-width: 1200px){
+  .container {
+    width: 100vw;
+    padding: 0 15px;
+  }
+
+  .cont_sec_5 {
+    height: auto;
+  }
+
+  .offers {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+  .offer_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto 54px auto;
+  }
+  .offer {
+    margin: 0 auto;
+  }
+  .cont_sec_5 {
+    margin: 60px auto 60px;
+  }
+
+}
+
+// BreakPoint 2 - spadają elementy sekcji 4 (o nas)
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .container {
+    width: 100vw;
+    padding: 0 15px;
+  }
+
+  .cont_sec_4 {
+    height: auto;
+  }
+
+  .inside_cont_sec_4 {
+    width: 440px;
+  }
+
+  .laptop.about_us {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .laptop_icon_box {
+    padding: 38px 0 38px 0;
+  }
+  .laptop .sec_4_text {
+    width: 400px;
+    padding: 0;
+  }
+
+  .line.red_line {
+    margin-top: 40px;
+  }
+
+  .mobile.about_us {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+  }
+  .mobile .sec_4_text {
+    width: 400px;
+    margin: 0;
+  }
+  .line.blue_line {
+    margin-top: 20px;
+  }
+  .trumpet.about_us {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+  }
+  .outside_trumpet_text {
+    width: 440px;
+    margin: 0;
+  }
+  .trumpet .sec_4_text {
+    width: 400px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .cont_sec_5 {
+    height: auto;
+  }
+
+  .offers {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+  .offer_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto 54px auto;
+  }
+  .offer {
+    margin: 0 auto;
+  }
+  .cont_sec_5 {
+    margin: 60px auto 60px;
+  }
+}
+
+//BreakPoint 3 - spadają elementy formularza kontaktowego (sekcja 6)
+
+@media screen and (min-width: 450px) and (max-width: 800px) {
+  .container {
+    width: 100vw;
+    padding: 0 15px;
+  }
+
+  .cont_sec_4 {
+    height: auto;
+  }
+
+  .inside_cont_sec_4 {
+    width: 440px;
+  }
+
+  .laptop.about_us {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .laptop_icon_box {
+    padding: 38px 0 38px 0;
+  }
+  .laptop .sec_4_text {
+    width: 400px;
+    padding: 0;
+  }
+
+  .line.red_line {
+    margin-top: 40px;
+  }
+
+  .mobile.about_us {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+  }
+  .mobile .sec_4_text {
+    width: 400px;
+    margin: 0;
+  }
+  .line.blue_line {
+    margin-top: 20px;
+  }
+  .trumpet.about_us {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+  }
+  .outside_trumpet_text {
+    width: 440px;
+    margin: 0;
+  }
+  .trumpet .sec_4_text {
+    width: 400px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .cont_sec_5 {
+    height: auto;
+  }
+
+  .offers {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+  .offer_container {
+    width: auto;
+    height: auto;
+    margin: 0 auto 54px auto;
+  }
+  .offer {
+    margin: 0 auto;
+  }
+  .cont_sec_5 {
+    margin: 60px auto 60px;
+  }
+  .sec_5a {
+    display: none;
+  }
+
+  .cont_sec_6 {
+    width: 375px;
+    height: 644px;
+    margin: 84px auto 59px;
+    display: block;
+  }
+  .cont_question {
+    width: 316px;
+    margin: 0 auto;
+  }
+  .contact_icons {
+    display: block;
+  }
+  .question {
+    font-size: 2.500rem;
+    margin-bottom: 5px;
+  }
+  .contact_us {
+    margin-bottom: 29px;
+  }
+  ._mail {
+    margin-top: 15px;
+  }
+  ._phone {
+    margin-top: 17px;
+  }
+
+  .contact_form {
+    width: 316px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .name.email {
+    width: 316px;
+    margin: 56px 0 30px;
+  }
+  .name_input_1, .input_1, .email_input_2, .input_2 {
+    width: 316px;
+  }
+  div.rodo {
+    width: 316px;
+    height: 156px;
+  }
+
+  label.rodo {
+    width: 277px;
+    height: 156px;
+    margin: 0;
+  }
+  .footer-logo_cont {
+    margin-left: 17px;
+  }
+  .socials {
+    margin-right: 30px;
+  }
+  .copyright {
+    margin-top: 0.5px;
+  }
+
+
+}
+// BreakPoint 4 - spadają ikonki sekcji 3 "dalczego warto"
+// Jest to w zasadzie wersja ostateczna. wymagana na iPhone6 (375px)
+
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 100%;
    }
 
    .start_button {
-     padding: 22px 92px 23px 92px;
-     margin: 0 32px;
+     max-width: 310px;
+     padding: 22px 0 23px 0;
+     margin: 0 auto;
    }
 
    .sec_text {
@@ -84,13 +367,12 @@
      width: 127px;
      height: 127px;
      margin:0 0 19.5px 88.5px;
-
    }
+
    .pic {
      width: 90px;
      height: 90px;
      margin: 20px 20px 20px 20px;
-
    }
 
    .laptop.sec_4_text {
@@ -121,12 +403,10 @@
      align-items: center;
    }
 
-
    .mobile_icon_box {
      width: 175px;
      height: 142px;
      padding: 19px 50px 0 90px;
-
    }
 
    .mobile_pic {
@@ -172,7 +452,6 @@
      height: auto;
      display: flex;
      margin: 0;
-
    }
 
    .trumpet .sec_4_text {
@@ -186,7 +465,6 @@
      font-size: 1.875rem;
      height: auto;
      margin: 30px 0 0 21px;
-
    }
 
    .trumpet .sec_4_paragraph {
@@ -217,6 +495,7 @@
      display: block;
      width: 375px;
      height: auto;
+     margin: 0 auto;
    }
 
    .offer_container {
@@ -241,6 +520,7 @@
    .offer.basic {
      margin: 0;
    }
+
    .offer.professional {
      width: 339px;
      height: 277px;
@@ -250,7 +530,6 @@
    .offer.premium {
      margin: 0;
    }
-
 
    .liPoint {
      text-align: left;

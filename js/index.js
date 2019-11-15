@@ -149,6 +149,17 @@ document.addEventListener('DOMContentLoaded', function (e) {
         total.innerText = '$' + (sum1 + sum2 + sum3 + sum4 + sum5);
     });
 
+    //HAMBURGER MENU W WERSJI MOBILNEJ
+
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.page-nav-list');
+
+    hamburger.addEventListener('click', function(){
+        hamburger.classList.toggle('hamburger-active');
+        navList.classList.toggle('nav_list_mobile');
+    });
+
+
 });
 
 

@@ -658,10 +658,10 @@
    }
   }
 
-// BreakPoint 5 - tu wjeżdża Hamburger Menu
+// BreakPoint 5 - tu pojawia się Hamburger Menu (znika i pojawia się skokowo,
+// żeby nie było nieładnego efektu "pojawienia się  i zniknięcia" przy zmniejszeniu ekranu.
 
 @media screen and (max-width: 620px) {
-
   .page-logo {
     padding: 16px 0 17px 25px;
   }
@@ -675,14 +675,11 @@
     position: absolute;
     left: 0;
     top: 83px;
-    display: block;
-    transform: translateY(-260px);
-    transition: transform .3s .1s ease-in-out;
+    display: none;
   }
   .nav_list_mobile.page-nav-list {
     display: block;
     transform: translateY(-10px);
-
   }
 
   .nav {
@@ -747,4 +744,34 @@
     transform: translateY(-4px) rotate(-45deg);
   }
 
+}
+
+//Tu menu nadal jest niewidoczne (zniknęło 5 px temu) ale pojawia się i znika w ładny animowany sposób :)
+
+@media screen and (max-width: 615px) {
+  .page-logo {
+    padding: 16px 0 17px 25px;
+  }
+
+  .page-nav-list {
+    background-color: var(--color-white);
+    box-shadow: 0 3px 6px #00000029;
+    width: 100%;
+    height: auto;
+    padding: 26px 0 20px 0;
+    position: absolute;
+    left: 0;
+    top: 83px;
+    display: block;
+    transform: translateY(-260px);
+    transition: transform .3s .1s ease-in-out;
+  }
+  .nav_list_mobile.page-nav-list {
+    display: block;
+    transform: translateY(-10px);
+
+  }
+  .nav {
+    margin: 14px auto 14px 25px;
+  }
 }

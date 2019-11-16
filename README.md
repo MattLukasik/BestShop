@@ -1,2 +1,2 @@
 # BestShop
-Graduating CodersLab Project
+CodersLab Project

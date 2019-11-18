@@ -154,11 +154,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
     const hamburger = document.querySelector('.hamburger');
     const navList = document.querySelector('.page-nav-list');
 
-    hamburger.addEventListener('click', function(){
+    hamburger.addEventListener('click', ()=>{
         hamburger.classList.toggle('hamburger-active');
         navList.classList.toggle('nav_list_mobile');
     });
-
 
 });
 

@@ -1,4 +1,4 @@
-# BestShop landing page
+# BestShop
 > Developed during Front-end Developer CodersLab' Training
 
 #### HTML5, CSS, Sass, JavaScript
